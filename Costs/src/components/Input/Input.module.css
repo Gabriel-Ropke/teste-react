@@ -1,0 +1,28 @@
+div.inputContainer {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  gap: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+  input {
+    background: none;
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    border-bottom: 2px solid white;
+    width: 100%;
+  }
+  input:focus ~ label,
+  input ~ label.activeLabel {
+    top: -50%;
+    left: 10px;
+    font-size: 12px;
+  }
+  input ~ label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+  }
+}

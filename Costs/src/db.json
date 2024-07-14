@@ -1,0 +1,34 @@
+{
+  "mangas": [
+    {
+      "id": 1,
+      "name": "Wind Breaker",
+      "chapter": 146,
+      "categories": [1, 2, 3],
+      "releaseYear": 2017,
+      "cover": "src"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Ação"
+    },
+    {
+      "id": 2,
+      "name": "Aventura"
+    },
+    {
+      "id": 3,
+      "name": "Magia"
+    },
+    {
+      "id": 4,
+      "name": "Slice of Life"
+    },
+    {
+      "id": 5,
+      "name": "Romance"
+    }
+  ]
+}

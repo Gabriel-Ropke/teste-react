@@ -1,0 +1,143 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "social social social"
+    "linksOne name linksTwo";
+  justify-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  a:not([class]) {
+    color: #585858;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    &:hover {
+      color: white;
+    }
+  }
+  ul {
+    &.linksOne,
+    &.linksTwo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .socialMediaList {
+    grid-area: social;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+    gap: 0;
+    width: 75%;
+    height: 100%;
+    margin-bottom: 50px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex: 1;
+      &:last-child a::before,
+      &:last-child a::after {
+        content: none;
+      }
+      a {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          right: 0;
+          top: 50%;
+          background: #585858;
+          transform: translateY(-50%) rotate(25deg);
+        }
+        &::after {
+          height: 0;
+          background: #585858;
+          transition: 0.5s ease;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        line-height: 1;
+        padding: 10px;
+        transition: 0.3s ease;
+        svg {
+          fill: #585858;
+        }
+      }
+
+      a:hover {
+        &.facebook::after {
+          height: 120%;
+          background: #5370a4;
+        }
+        &.facebook svg {
+          fill: #5370a4;
+        }
+        &.youtube::after {
+          height: 120%;
+          background: #bb413e;
+        }
+        &.youtube svg {
+          fill: #bb413e;
+        }
+        &.instagram::after {
+          height: 120%;
+          background: #be3191;
+        }
+        &.instagram svg {
+          fill: #be3191;
+        }
+        &.twitter::after {
+          height: 120%;
+          background: #00aced;
+        }
+        &.twitter svg {
+          fill: #00aced;
+        }
+        &.discord::after {
+          height: 120%;
+          background: #798cc5;
+        }
+        &.discord svg {
+          fill: #798cc5;
+        }
+      }
+    }
+  }
+  .linksOne {
+    grid-area: linksOne;
+  }
+  .name {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(208, 208, 208);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgb(208, 208, 208);
+    }
+  }
+  .linksTwo {
+    grid-area: linksTwo;
+  }
+}

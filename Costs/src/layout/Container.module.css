@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 95vh;
+  &.column {
+    flex-flow: column;
+  }
+  &.content_center {
+    justify-content: center;
+    align-items: center;
+  }
+  &.height100vh {
+    min-height: 100vh;
+  }
+  &.gap20 {
+    gap: 20px;
+  }
+}
